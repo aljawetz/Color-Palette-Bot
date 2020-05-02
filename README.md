@@ -1,5 +1,6 @@
 # Color Palette Bot for Twitter
-> This bot responds to twitter mentions ([@get_palette](https://twitter.com/get_palette)) with the color palette of the image that was marked.
+
+This bot responds to twitter mentions ([@get_palette](https://twitter.com/get_palette)) with the color palette of the image that was marked.
 
 ## Development setup
 
