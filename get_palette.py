@@ -56,15 +56,17 @@ def get_color_palette(image_url):
 
 
 def create_color_palette_image(color_palette):
-    color_palette_image = Image.new('RGB', (600, 600))
+    size = 600
+    color_palette_image = Image.new('RGB', (size, size))
     draw = ImageDraw.Draw(color_palette_image)
 
+    porc = size/len(color_count)
     x0 = 0
-    x1 = 100
+    x1 = porc
     for color in color_palette:
         draw.rectangle(((x0, 0), (x1, 600)), fill=color)
-        x0 += 100
-        x1 += 100
+        x0 += porc
+        x1 += porc
 
     color_palette_image.save('image.png')
 
