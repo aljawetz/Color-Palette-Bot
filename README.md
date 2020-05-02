@@ -13,5 +13,5 @@ pip install urllib3
 pip install colorthief
 ```
 
-For the conection with the twitter API you'll need to get the access token, access token secret, consumer key and consumer secret in the twitter developer page (https://developer.twitter.com/en/docs).
+For the conection with the twitter API you'll need to get the access token, access token secret, consumer key and consumer secret in the twitter developer page (https://developer.twitter.com/en/docs) and paste it in the get_palette.py.
 
