@@ -56,27 +56,15 @@ def get_color_palette(image_url):
 
 
 def create_color_palette_image(color_palette):
-    height = 600
-    width = 600
-    color_palette_image = Image.new('RGB', (width, height))
+    color_palette_image = Image.new('RGB', (600, 600))
     draw = ImageDraw.Draw(color_palette_image)
 
-    porcentage = width / 100
     x0 = 0
-    y0 = 0
-    x1 = porcentage
-    y1 = porcentage
-
-    while (y1 <= height):
-        while(x1 <= width):
-            draw.rectangle(((x0, y0), (x1, y1)),
-                           fill=random.choice(color_palette))
-            x0 += porcentage
-            x1 += porcentage
-        x0 = 0
-        x1 = porcentage
-        y0 += porcentage
-        y1 += porcentage
+    x1 = 100
+    for color in color_palette:
+        draw.rectangle(((x0, 0), (x1, 600)), fill=color)
+        x0 += 100
+        x1 += 100
 
     color_palette_image.save('image.png')
 
